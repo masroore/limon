@@ -103,7 +103,7 @@ class Router
         $no_slash_asterisk_subpattern = "(?:([^\/]*))?";
 
         if (strpos($path, '^') === 0) {
-            if ($path{strlen($path) - 1} !== '$') {
+            if ($path[strlen($path) - 1] !== '$') {
                 $path .= '$';
             }
             $pattern = '#' . $path . '#i';
